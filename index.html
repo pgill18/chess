@@ -32,11 +32,13 @@
 			<label for="myHints">Hints:</label>
 			<div id="myHints"></div>
 			<hr>
-			<p>Text commands</p>
-			<textarea id="cmd" class="form-control"></textarea>
-			<div id="lang" class="mt-1"></div>
-			<br>
-			<button class="btn btn-secondary" id="goBtn">Go</button>
+			<div id="textCommands" style="display:none">
+				<p>Text commands</p>
+				<textarea id="cmd" class="form-control"></textarea>
+				<div id="lang" class="mt-1"></div>
+				<br>
+				<button class="btn btn-secondary" id="goBtn">Go</button>
+			</div>
 		</div>
 
 		<div id="myButtons" class=" col-5">
@@ -119,34 +121,36 @@
 			</div>
 			<br>
 			<button class="btn btn-secondary" id="startBtn">Start</button>
-			<hr>
-			<p>Select commands</p>
-			<div id="list00"></div>
-			<div id="list01" style="display:inline"></div>
-			<div id="list02" style="display:inline"></div>
-			<div id="list03" style="display:inline"></div>
-			<div id="list04"></div>
-			<div id="list05"></div>
-			<br><hr>
-			<div id="list10"></div>
-			<div id="list11" style="display:inline"></div>
-			<div id="list12" style="display:inline"></div><br/>
-			<div id="list13" style="display:inline"></div>
-			<div id="list14" style="display:inline"></div><br/>
-			<div id="list15" style="display:inline"></div>
-			<!-- <div id="list16" style="display:inline"></div><br/> -->
-			<!-- <div id="list17" style="display:inline"></div> -->
-			<!-- <div id="list18" style="display:inline"></div><br/> -->
-			<!-- <div id="list19" style="display:inline"></div> -->
-			<br><hr>
-			<div id="list20"></div>
-			<div id="list21" style="display:inline"></div>
-			<div id="list22" style="display:inline"></div>
-			<div id="list23" style="display:inline"></div>
-			<div id="list24"></div>
-			<div id="list25"></div>
-			<br><hr>
-			<button class="btn btn-secondary" id="goBtn">Go</button>
+			<div id="selectCommands" style="display:none">
+				<hr>
+				<p>Select commands</p>
+				<div id="list00"></div>
+				<div id="list01" style="display:inline"></div>
+				<div id="list02" style="display:inline"></div>
+				<div id="list03" style="display:inline"></div>
+				<div id="list04"></div>
+				<div id="list05"></div>
+				<br><hr>
+				<div id="list10"></div>
+				<div id="list11" style="display:inline"></div>
+				<div id="list12" style="display:inline"></div><br/>
+				<div id="list13" style="display:inline"></div>
+				<div id="list14" style="display:inline"></div><br/>
+				<div id="list15" style="display:inline"></div>
+				<!-- <div id="list16" style="display:inline"></div><br/> -->
+				<!-- <div id="list17" style="display:inline"></div> -->
+				<!-- <div id="list18" style="display:inline"></div><br/> -->
+				<!-- <div id="list19" style="display:inline"></div> -->
+				<br><hr>
+				<div id="list20"></div>
+				<div id="list21" style="display:inline"></div>
+				<div id="list22" style="display:inline"></div>
+				<div id="list23" style="display:inline"></div>
+				<div id="list24"></div>
+				<div id="list25"></div>
+				<br><hr>
+				<button class="btn btn-secondary" id="goBtn">Go</button>
+			</div>
 		</div>
 	</div>
 	<!-- <br><hr> -->
