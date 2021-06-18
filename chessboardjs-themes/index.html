@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>♕ Chessboarjs Pieces Themes</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="chessboard.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <style>
+  .container {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+  }
+  .boardcontainer {
+    width: 100%;
+    padding: 20px;
+  }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="chessboard.js"></script>
+  <script src="chessboardjs-themes.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>Chessboardjs Pieces Themes</h3>
+  <div class="row" id="boardcontent">
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+  var themes = ["chess24", "metro", "leipzig", "wikipedia", "uscf", "dilena", "symbol"];
+
+  themes.forEach(function(theme) {
+
+    coldiv = document.createElement("div");
+    coldiv.className = "col-md-4 container";
+
+    title = document.createElement("h4");
+    title.innerHTML = theme + " theme";
+
+    boarddiv = document.createElement("div");
+    boarddiv.id = theme
+    boarddiv.className = "boardcontainer";
+
+    coldiv.appendChild(title);
+    coldiv.appendChild(boarddiv);
+
+    document.getElementById("boardcontent").appendChild(coldiv);
+
+    var board =  ChessBoard(theme, {
+      pieceTheme: window[theme + "_piece_theme"],
+      position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R',
+      boardTheme: window[theme + "_board_theme"]
+    });
+
+    $(window).resize(board.resize);
+
+  });
+
+  /* adding default */
+  coldiv = document.createElement("div");
+  coldiv.className = "col-md-4 container";
+  title = document.createElement("h4");
+  title.innerHTML = "Default chessboardjs"
+  boarddiv = document.createElement("div");
+  boarddiv.id = "default"
+  boarddiv.className = "boardcontainer";
+
+  coldiv.appendChild(title);
+  coldiv.appendChild(boarddiv);
+
+  document.getElementById("boardcontent").appendChild(coldiv);
+  var board =  ChessBoard("default", {
+    pieceTheme: wikipedia_piece_theme,
+    position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R'
+  });
+
+  $(window).resize(board.resize);
+
+});
+</script>
+</body>
+</html>

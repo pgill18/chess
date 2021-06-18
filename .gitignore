@@ -1,0 +1,6 @@
+bak*/
+node_modules/
+temp*/
+server/
+extra/
+package*.json

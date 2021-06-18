@@ -1,0 +1,32 @@
+.highlight-white {
+  box-shadow: inset 0 0 3px 3px yellow;
+}
+.highlight-black {
+  box-shadow: inset 0 0 3px 3px blue;
+}
+
+.highlight-0 {
+  box-shadow: inset 0 0 3px 3px #663399; /* purple */
+}
+.highlight-1 {
+  box-shadow: inset 0 0 3px 3px #05b4ff; /* blue */
+}
+.highlight-2 {
+  box-shadow: inset 0 0 3px 3px #2FA848; /* green */
+}
+.highlight-3 {
+  box-shadow: inset 0 0 3px 3px #DEC247; /* yellow */
+}
+.highlight-4 {
+  box-shadow: inset 0 0 3px 3px #F07022; /* red-orange */
+}
+
+.highlight-x {
+  box-shadow: inset 0 0 3px 3px black;
+}
+.highlight-y {
+  box-shadow: inset 0 0 3px 3px white;
+}
+.highlight-z {
+  box-shadow: inset 0 0 3px 3px lime;
+}

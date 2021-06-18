@@ -1,0 +1,500 @@
+   36  ls c:/'Program Files'
+   37  ls c:/'Program Files (x86)'
+   38  ls c:/'Program Files (x86)'/
+   39  ls c:/'Program Files'/
+   40  ls c:/'Program Files'/nodejs
+   41  node lang_check.js 
+   42  node lang_check.js 
+   43  node lang_check.js 
+   44  node lang_check.js 
+   45  node lang_check.js 
+   46  nvm ls
+   47  which nvm
+   48  ls /cygdrive/c/Users/parmi/AppData/Roaming/
+   49  nvm install 8
+   50  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+   51  node lang_check.js 
+   52  npm i -S language-grammar-api
+   53  node lang_check.js 
+   54  vi leverage.js
+   55  node leverage.js 
+   56  vi leverage.js
+   57  node leverage.js 
+   58  vi leverage.js
+   59  node leverage.js 
+   60  vi leverage.js
+   61  node leverage.js 
+   62  node leverage.js 55 2 0.5
+   63  node leverage.js 384 7.28 0.488
+   64  vi leverage.js
+   65  node leverage.js 
+   66  head leverage.js | tail -1
+   67  head -1 leverage.js | tail -1
+   68  node leverage.js 384 1.01 0.062
+   69  vi statement.js
+   70  node statement.js 
+   71  vi statement.js
+   72  node statement.js 
+   73  node statement.js 
+   74  vi statement.js
+   75  node statement.js 
+   76  vi statement.js
+   77  node statement.js 
+   78  vi statement.js
+   79  node statement.js 
+   80  vi statement.js
+   81  node statement.js 
+   82  vi statement.js
+   83  cp leverage.js leverage2.js 
+   84  vi leverage2.js
+   85  vi leverage2.js
+   86  node leverage2.js
+   87  vi leverage2.js
+   88  node leverage.js 384 7.28 0.488
+   89  node leverage.js 50 2 0.5
+   90  vi leverage2.js
+   91  node leverage.js 50 2 0.5
+   92  node leverage.js 16 0.84 0.3
+   93  node leverage.js 16 1.56 0.565
+   94  node leverage.js 16.21 1.56 0.565
+   95  node leverage.js 16.21 2.5 0.8155
+   96  vi leverage2.js
+   97  node leverage.js 16.21 2.5 0.8155
+   98  node leverage2.js 16.21 2.5 0.8155
+   99  vi leverage2.js
+  100  node leverage2.js 16.21 2.5 0.8155
+  101  vi leverage2.js
+  102  node leverage2.js 16.21 2.5 0.8155
+  103  vi leverage2.js
+  104  node leverage2.js 16.21 2.5 0.8155
+  105  node leverage2.js 16.21 0.86 0.306
+  106  vi leverage2.js
+  107  vi leverage2.js
+  108  :q
+  109  vi leverage2.js
+  110  vi leverage2.js
+  111  node leverage2.js 16.21 0.86 0.306
+  112  vi leverage2.js
+  113  node leverage2.js 16.21 0.86 0.306
+  114  vi leverage2.js
+  115  node leverage2.js 16.21 0.86 0.306
+  116  :q
+  117  vi leverage2.js
+  118  vi leverage2.js
+  119  node leverage2.js 16.21 0.86 0.306
+  120  vi leverage2.js
+  121  node leverage2.js 16.21 0.86 0.306
+  122  vi leverage2.js
+  123  node leverage2.js 16.21 0.86 0.306
+  124  vi leverage2.js
+  125  vi leverage2.js
+  126  node leverage2.js 16.21 0.86 0.306
+  127  vi leverage2.js
+  128  node leverage2.js 16.21 0.86 0.306
+  129  vi leverage2.js
+  130  node leverage2.js 16.21 0.86 0.306
+  131  vi leverage2.js
+  132  node leverage2.js 16.21 0.86 0.306
+  133  vi leverage2.js
+  134  node leverage2.js 16.21 0.86 0.306
+  135  vi leverage2.js
+  136  node leverage2.js 16.21 0.86 0.306
+  137  vi leverage2.js
+  138  node leverage2.js 16.21 1.56 0.565
+  139  ls
+  140  vi statement.js
+  141  node statement.js
+  142  vi statement.js
+  143  node statement.js
+  144  which node
+  145  vi ~/.bashrc
+  146  vi ~/.profile
+  147  echo $PATH
+  148  which nvm
+  149  echo $NVM_HOME
+  150  which node
+  151  which node
+  152  cd C:\Projects\nodejs\themes\black-dashboard-pro-v1.1.1\black-dashboard-pro-v1.1.1
+  153  cd "C:\Projects\nodejs\themes\black-dashboard-pro-v1.1.1\black-dashboard-pro-v1.1.1"
+  154  npm install
+  155  gulp
+  156  npm start
+  157  vi package.json 
+  158  which gulp
+  159  npm -v
+  160  npm install --global gulp-cli
+  161  gulp --version
+  162  gulp
+  163  nvm
+  164  nvm list
+  165  nvm use 10.16.3
+  166  nvm use 10.15.3
+  167  gulp
+  168  nvm use 8.17.0
+  169  gulp
+  170  which node
+  171  "/cygdrive/c/Program Files/nodejs/node" -v
+  172  which node
+  173  cd /cygdrive/c/Projects/nodejs/themes/black-dashboard-pro-v1.1.1/black-dashboard-pro-v1.1.1
+  174  gulp
+  175  which node
+  176  "/cygdrive/c/Program Files/nodejs/node"
+  177  "/cygdrive/c/Program Files/nodejs/node" -v
+  178  node -v
+  179  which nvm
+  180  which node
+  181  cd /cygdrive/c/Projects/nodejs/themes/black-dashboard-pro-v1.1.1/black-dashboard-pro-v1.1.1
+  182  gulp
+  183  node -v
+  184  gulp
+  185  gulp
+  186  gulp
+  187  vi package.json 
+  188  npm install
+  189  vi package.json 
+  190  npm install
+  191  gulp
+  192  npm graceful-fs
+  193  npm uninstall graceful-fs
+  194  npm uninstall graceful-fs
+  195  npm uninstall graceful-fs
+  196  npm uninstall graceful-fs
+  197  gulp
+  198  which gulp
+  199  gulp -v
+  200  npm i graceful-fs 
+  201  gulp
+  202  ls
+  203  grep graceful gulpfile.js
+  204  grep graceful *json
+  205  npm install -g n
+  206  gulp
+  207  npm rebuild node-sass
+  208  gulp
+  209  bash --v
+  210  bash --version
+  211  history | tail
+  212  exit
+  213  mongo --version
+  214  which mongodb
+  215  which mongod
+  216  which mongo
+  217  which mongo
+  218  which mongodb
+  219  cd /cygdrive/c/projects/nodejs/maker/mebn/demo-node-app
+  220  ls
+  221  cd ..
+  222  ls
+  223  cd app-one
+  224  ls
+  225  mongo --version
+  226  cd /cygdrive/c/projects/nodejs/maker/mebn/app-ejs/codediff
+  227  cd ..
+  228  ls
+  229  cd ..
+  230  ls
+  231  mkdir expts
+  232  cd expts/
+  233  get clone https://github.com/prettydiff/prettydiff.git
+  234  git clone https://github.com/prettydiff/prettydiff.git
+  235  cd prettydiff
+  236  npm install typescript -g
+  237  npm install eslint -g
+  238  npm install
+  239  tsc --pretty
+  240  node js/services build
+  241  tsc --pretty
+  242  node js/services build
+  243  node -v
+  244  nvm list
+  245  nvm ls-remote
+  246  nvm list available
+  247  nvm version
+  248  which nvm
+  249  ls
+  250  vi abc.sh
+  251  nvm install --lts --latest-npm
+  252  nvm install --lts.14 --latest-npm
+  253  nvm install --lts.14.5 --latest-npm
+  254  nvm install --lts.14.15.5 --latest-npm
+  255  nvm use 14.15.5
+  256  history
+  257   node js/services build
+  258  npm update
+  259   node js/services build
+  260  vi package.json 
+  261   node js/services build
+  262  ls
+  263  cd ..
+  264  ls
+  265  \rm -rf prettydiff/
+  266  git clone https://github.com/prettydiff/prettydiff.git
+  267  cd prettydiff/
+  268  npm install
+  269  tsc --pretty
+  270  npm install typescript -g
+  271  npm install eslint -g
+  272  tsc --pretty
+  273  env | grep _remove
+  274  ls "C:\Program Files\nodejs"
+  275  ls "C:\Program Files\nodejs"/_remove
+  276  nvm version
+  277  nvm current
+  278  which node
+  279  nvm list
+  280  uname
+  281  uname -a
+  282  recent
+  283  cd /home/parmi/code/options
+  284  ls
+  285  ls -al
+  286  tail .history
+  287  cd /home/parmi/code/stocks
+  288  tail .history
+  289  ls -al
+  290  tail .history1
+  291  tail .history2
+  292  cd /cygdrive/c/Projects/nodejs/expts/options_trading
+  293  ls -al
+  294  cat .history1
+  295  bash crone_all_v2.sh
+  296  cd ~/code
+  297  mkdir ml
+  298  cd l
+  299  mkdir random_forest
+  300  mv random_forest/ ml
+  301  cd ml/random_forest/
+  302  touch main.js
+  303  vi main.js 
+  304  git init
+  305  npm init -y
+  306  node -v
+  307  vi main.js 
+  308  npm i ml-random-forest --save
+  309  node main.js 
+  310  vi main.js 
+  311  node main.js 
+  312  node data.js 
+  313  node data.js 
+  314  node data.js 
+  315  node data.js 
+  316  node data.js 
+  317  node data.js 
+  318  node data.js 
+  319  node data.js 
+  320  node data.js 
+  321  node data.js 
+  322  node data.js 
+  323  node data.js 
+  324  node data.js 
+  325  node main.js 
+  326  node main.js 
+  327  node main.js 
+  328  node main.js 
+  329  node main.js 
+  330  node main.js 
+  331  node main.js 
+  332  node main.js 
+  333  node main.js 
+  334  cp main.js main2.js 
+  335  node main2.js 
+  336  node main2.js 
+  337  node main2.js 
+  338  node main2.js 
+  339  node main2.js 
+  340  node main2.js 
+  341  time node main2.js 
+  342  time node main2.js 
+  343  time node main2.js 
+  344  time node main2.js 
+  345  time node main2.js 
+  346  time node main2.js 
+  347  node data.js 
+  348  time node main2.js 
+  349  time node main2.js 
+  350  time node main2.js 
+  351  node data.js 
+  352  time node main2.js 
+  353  time node main2.js 
+  354  time node main2.js 
+  355  node data.js 
+  356  time node main2.js 
+  357  node data.js 
+  358  time node main2.js 
+  359  time node main2.js 
+  360  time node main2.js 
+  361  save
+  362  recent
+  363  cd c:/projects/nodejs/gen
+  364  ls
+  365  cd expt/expt3
+  366  cd expts/expt3
+  367  ls
+  368  node temp.js 
+  369  node temp.js 
+  370  node temp.js 
+  371  node temp.js 
+  372  cat temp.js 
+  373  node temp.js 
+  374  node temp.js 
+  375  node temp.js 
+  376  node temp.js 
+  377  node temp.js 
+  378  node temp.js 
+  379  cat temp.js 
+  380  cat temp.js 
+  381  node temp.js 
+  382  node temp.js 
+  383  vi a.js
+  384  node a.js
+  385  vi a.js
+  386  node a.js
+  387  vi a.js
+  388  node a.js
+  389  vi a.js
+  390  node a.js
+  391  which node
+  392  node expt1.js 
+  393  node expt.js 
+  394  node a.js 
+  395  games
+  396  game
+  397  gamer
+  398  cd ../games
+  399  ls
+  400  cd lucy
+  401  ls
+  402  node main.js 
+  403  node main.js 
+  404  node main.js 
+  405  node main.js 
+  406  node main.js 
+  407  node main.js 
+  408  node main.js 
+  409  node main.js 
+  410  node main.js 
+  411  node main.js 
+  412  node main.js 
+  413  node main.js 
+  414  node main.js 
+  415  node main.js 
+  416  node main.js 
+  417  node main.js 
+  418  node main.js 
+  419  node main.js 
+  420  node main.js 
+  421  node main.js 
+  422  node main.js 
+  423  node main.js 
+  424  node main.js 
+  425  node main.js 
+  426  node main.js 
+  427  node main.js 
+  428  node main.js 
+  429  cd ../minimal/
+  430  ls
+  431  touch main.js
+  432  git init
+  433  node main.js 
+  434  node main.js 
+  435  node main.js 
+  436  node main.js 
+  437  node main.js 
+  438  node main.js 
+  439  node main.js 
+  440  node main.js 
+  441  node main.js 
+  442  node main.js 
+  443  node main.js 
+  444  node main.js 
+  445  node main.js 
+  446  node main.js 
+  447  git add .
+  448  git status
+  449  git add .
+  450  git status
+  451  git commit -am "initial game in 10 lines. civilization of 10 people. seasonal production changes."
+  452  git status
+  453  git history
+  454  git h
+  455  git help
+  456  git log
+  457  cd ..
+  458  mv minimal/ js
+  459  ls
+  460  mv minimal/ js
+  461  ls
+  462  mkdir minimal
+  463  cd minimal/
+  464  mv ../js .
+  465  ls
+  466  cd ..
+  467  ls
+  468  ls js
+  469  mv js minimal/
+  470  ls -alrt
+  471  mkdir minimal/js
+  472  ls js/
+  473  ls js/*
+  474  ls -alrt js/*
+  475  ls -a js/*
+  476  mv js/main.js minimal/js/.
+  477  ls js
+  478  ls -al js
+  479  \rm -rf js
+  480  cd minimal/js
+  481  ls
+  482  git init
+  483  ls -al
+  484  ls
+  485  ls -alrt
+  486  cd ..
+  487  mkdir cpp
+  488  cd cpp
+  489  vi main.cpp
+  490  which cpp
+  491  which c
+  492  which c++
+  493  which g++
+  494  which gcc
+  495  which vcc
+  496  which gcc
+  497  which g++
+  498  gcc main.cpp 
+  499  gcc main.cpp 
+  500  node -v
+  501  gamer
+  502  cd ../games
+  503  node chess
+  504  cd chess/
+  505  cls
+  506  node server/
+  507  node server/
+  508  touch commands.js
+  509  node server/
+  510  ls bak
+  511  node server/
+  512  mkdir bak1
+  513  cp index.html bak1/
+  514  cp script.js bak1/
+  515  cp ui.js bak1/
+  516  ls
+  517  cp console.mjs bak1/
+  518  cp styles.css bak1/
+  519  node server/
+  520  cp commands.js commands.yml
+  521  node server/
+  522  node commands.js 
+  523  node commands.js 
+  524  node commands.js 
+  525  node commands.js 
+  526  node commands.js 
+  527  node commands.js 
+  528  node commands.js 
+  529  node commands.js 
+  530  node commands.js 
+  531  node commands.js 
+  532  node commands.js 
+  533  node commands.js 
+  534  node commands.js 
+  535  save
