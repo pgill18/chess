@@ -1,7 +1,9 @@
 import { game, board, controls, onDrop } from './script.js'
+import { commands } from './commands.js'
+import { speech } from './speech1.js'
 
 const content = {
-	verb0: [{'use':'use'}, {'pick':'pick'}, {'select':'select'}],
+	verb0: [{'use':'use'}, {'pick':'pick'}, {'select':'select'}, {'play':'play'}],
 	verb2: [{'take':'take'}, {'capture':'capture'}, {'target':'target'}],
 
 	file0: [{'':''}, {'first':'a'}, {'second':'b'}, {'third':'c'}, {'fourth':'d'}, {'fifth':'e'}, {'sixth':'f'}, {'seventh':'g'}, {'eighth':'h'}],
@@ -19,9 +21,9 @@ const content = {
 	name0: [{'king':'k'}, {'queen':'q'}, {'bishop':'b'}, {'knight':'n'}, {'rook':'r'}, {'pawn':'p'}],
 	name2: [{'king':'k'}, {'queen':'q'}, {'bishop':'b'}, {'knight':'n'}, {'rook':'r'}, {'pawn':'p'}],
 
-	verb1: [{'move':'move'}, {'push':'push'}],
+	verb1: [{'move':'move'}, {'push':'push'}, {'play':'play'}],
 	inc11: [{'1':1},{'2':2},{'3':3},{'4':4},{'5':5},{'6':6},{'7':7}],
-	dir11: dupkv([{'forward':'k'}, {'back':'q'}, {'left':'b'}, {'right':'n'}, {'forward-right':'r'}, {'forward-left':'p'}, {'back-right':'r'}, {'back-left':'p'}]),
+	dir11: dupkv([{'forward':'k'}, {'back':'q'}, {'left':'b'}, {'right':'n'}, {'forward-right':'r'}, {'forward-left':'p'}, {'back-right':'r'}, {'back-left':'p'}, {'backward-right':'r'}, {'backward-left':'p'}]),
 	inc12: [{'':''},{'1':1},{'2':2},{'3':3},{'4':4},{'5':5},{'6':6},{'7':7}],
 	dir12: [{'':''}, {'left':'left'}, {'right':'right'}],
 };
@@ -53,12 +55,20 @@ addList('list25', [{'':''}, {'black':'black'}, {'white':'white'}], "on square co
 
 addList('lang', [{'english':'en'}, {'punjabi':'pb'}], "", {}, list1Handler);
 
-document.getElementById("goBtn").addEventListener("click", go);
+document.getElementById("goBtnSelCmd").addEventListener("click", go);
+document.getElementById("goBtnTextCmd").addEventListener("click", go);
+document.getElementById("goBtnVoiceCmd").addEventListener("click", startSpeech);
 
-function go() {
+function startSpeech() {
+	console.log(`startSpeech()`)
+	speech.startSpeech(go)
+}
+
+function go(text) {
 	console.log(`go()`)
 	let cmd = $('#cmd').val();
-	console.log({cmd})
+	if(typeof text!=='string') text='';
+	console.log({cmd, text})
 	let user_color = game.board.getPlayingColor();
 	let turn_color = game.board.configuration.turn;
 	let other_color = turn_color==='white' ? 'black' : 'white';
@@ -74,6 +84,7 @@ function go() {
 	let list1 = [readlist('list10'),readlist('list11'),readlist('list12'),readlist('list13'),readlist('list14')]
 	let list2 = [readlist('list20'),readlist('list21'),readlist('list22'),readlist('list23'),readlist('list24'),readlist('list25')]
 	if(cmd) [list0, list1, list2] = parseCommand(cmd)
+	if(text) [list0, list1, list2] = parseCommand(text)
 	let language = readlist('lang');
 	let flip = user_color==='black';
 	console.log({list0, list1, list2, language})
@@ -85,6 +96,8 @@ function go() {
 	onDrop(move.from, move.to)
 }
 function parseCommand(text) {
+	text = commands.parseText(text)
+	console.log({text}, typeof text)
 	let parts = text.split(/\s*,\s*/);
 	console.log({parts})
 	let list0 = parts[0].split(/\s+/);
