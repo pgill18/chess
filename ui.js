@@ -291,6 +291,9 @@ function fetchValue(str, pairs) {
 	return "";
 }
 
+controls.setPlayerLevel(2)
+controls.setOpponentLevel(1)
+
 document.getElementById("startBtn").addEventListener("click", controls.startGame);
 
 document.getElementById("playColor").addEventListener("change", selectPlayColor);

@@ -56,7 +56,7 @@ function makeRandomMove () {
   var randomIdx = Math.floor(Math.random() * possibleMoves.length)
   var move = possibleMoves[randomIdx]
   game.move(move.from, move.to)
-  console.log(`Opponent's Random move`, move)
+  console.log(`Opponent's Random move`, move, {Level})
 
   // highlight black's move
   removeHighlights(Color.AI)
@@ -69,7 +69,7 @@ function makeRandomMove () {
 function makeAiMove () {
   let move = game.aiMove(Level.AI, true)
   if (!move) return alert(`Game over! You Won.`);
-  console.log(`Opponent's AI move`, move)
+  console.log(`Opponent's AI move`, move, {Level})
   // highlight black's move
   removeHighlights(Color.AI)
   $board.find('.square-' + move.from.toLowerCase()).addClass('highlight-'+Color.AI)
@@ -93,6 +93,7 @@ function showNextMove (level=0) {
   console.log({possibleMoves})
   let text = possibleMoves.map(move => `[${move.from},${move.to},${move.score}]`).join(' ')
   if (possibleMoves.length === 0) text = `Can't think of anything!`;
+  console.log(`Hints for next move`, text, {Level})
   console.log({text})
   $('#myHints').text( text )
   removeHighlights(Color.User);
