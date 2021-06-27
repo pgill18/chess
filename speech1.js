@@ -11,13 +11,13 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 // `.trim();
 
 // var grammar = '#JSGF V1.0; grammar colors; public <color> = (use king to move forward) ;'
-var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = (move third pawn 1 forward) ;'
+var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ਦੂਜਾ ਪਿਆਰਾ ਇਕ ਅੱਗੇ ਜਾਓ;'
 
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
-recognition.continuous = false;
+recognition.continuous = true;
 recognition.lang = 'en-US';
 // recognition.lang = 'hi-IN';
 // recognition.lang = 'pa-IN';
@@ -28,8 +28,9 @@ console.log( recognition )
 
 var callback;
 
-function startSpeech(cb) {
+function startSpeech(language, cb) {
   callback = cb;
+  recognition.lang = language;
   recognition.start();
   console.log('Ready to talk.');
 }
@@ -49,19 +50,37 @@ recognition.onresult = function(event) {
   let confidence = event.results[0][0].confidence;
   // console.log('Transcript: ' + transcript);
   // console.log('Confidence: ' + confidence);
-  parseSpeech(transcript, confidence)
+  // parseSpeech(transcript, confidence)
+  for(let a of Object.values(event.results[0])) {
+    let retval = parseSpeech(a.transcript.toLowerCase(), a.confidence)
+    if(retval) break;
+  }
+
+  if(recognition.abort) { recognition.abort(); }
+  // recognition.abort();
+  // recognition.stop();
+  // recognition.start();
+}
+
+recognition.onend = function(event) {
+    console.log(`recognition.onend() ... triggered`);
+    if(recognition.abort) { recognition.abort(); }
+    recognition.start();
 }
 
 recognition.onspeechend = function() {
-  recognition.stop();
+  console.log( "Speech ended." );
+  // recognition.stop();
 }
 
 recognition.onnomatch = function(event) {
-  diagnostic.textContent = "I didn't recognise that.";
+  // diagnostic.textContent = "I didn't recognise that.";
+  console.log( "I didn't recognise that." );
 }
 
 recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+  // diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+  console.log( 'Error occurred in recognition: ' + event.error );
 }
 
 const speech = { startSpeech, parseSpeech };

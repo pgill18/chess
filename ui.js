@@ -1,5 +1,7 @@
 import { game, board, controls, onDrop } from './script.js'
-import { commands } from './commands.js'
+import { commands_en } from './commands_en.js'
+import { commands_pa } from './commands_pa.js'
+// import { commands } from './commands.js'
 import { speech } from './speech1.js'
 
 const content = {
@@ -53,15 +55,27 @@ addList('list23', [{'king':'k'}, {'queen':'q'}, {'bishop':'b'}, {'knight':'n'}, 
 addList('list24', [{'':''}, {'front':'f'}, {'behind':'b'}, {'left':'l'}, {'right':'r'}], "the one on the", {dup:1}, list1Handler);
 addList('list25', [{'':''}, {'black':'black'}, {'white':'white'}], "on square colored", {}, list1Handler);
 
-addList('lang', [{'english':'en'}, {'punjabi':'pb'}], "", {}, list1Handler);
+addList('lang', [{'punjabi':'pa'}, {'english':'en'}], "", {}, list1Handler);
 
 document.getElementById("goBtnSelCmd").addEventListener("click", go);
 document.getElementById("goBtnTextCmd").addEventListener("click", go);
 document.getElementById("goBtnVoiceCmd").addEventListener("click", startSpeech);
 
+let language = 'hi-IN';
+let commands = commands_pa; // start with punjabi
+
+function selectLanguage(event) { 
+	language = event.target.value==='pa' ? 'hi-IN' : 'en-US';
+	commands = event.target.value==='pa' ? commands_pa : commands_en;
+// recognition.lang = 'en-US';
+// recognition.lang = 'hi-IN';
+// recognition.lang = 'pa-IN';
+// recognition.lang = 'pa-Guru-IN';
+}
+
 function startSpeech() {
 	console.log(`startSpeech()`)
-	speech.startSpeech(go)
+	speech.startSpeech(language, go)
 }
 
 function go(text) {
@@ -85,6 +99,7 @@ function go(text) {
 	let list2 = [readlist('list20'),readlist('list21'),readlist('list22'),readlist('list23'),readlist('list24'),readlist('list25')]
 	if(cmd) [list0, list1, list2] = parseCommand(cmd)
 	if(text) [list0, list1, list2] = parseCommand(text)
+	if(!list0 || !list1) return;
 	let language = readlist('lang');
 	let flip = user_color==='black';
 	console.log({list0, list1, list2, language})
@@ -92,12 +107,15 @@ function go(text) {
 	let piece2 = getPiece(list2, ocolor, flip);
 	let move = getMove(list1, piece1, flip);
 	console.log({piece1, piece2, move});
+	if(!piece1 || !move) return;
 	// game.move(move.from, move.to)
 	onDrop(move.from, move.to)
 }
 function parseCommand(text) {
+	if(!text) return [];
 	text = commands.parseText(text)
 	console.log({text}, typeof text)
+	if(!text) return [];
 	let parts = text.split(/\s*,\s*/);
 	console.log({parts})
 	let list0 = parts[0].split(/\s+/);
@@ -303,6 +321,7 @@ document.getElementById("maxHints").addEventListener("change", selectMaxHints);
 document.getElementById("minHints").addEventListener("change", selectMinHints);
 document.getElementById("boardTheme").addEventListener("change", selectBoardTheme);
 document.getElementById("pieceTheme").addEventListener("change", selectPieceTheme);
+document.getElementById("lang").addEventListener("change", selectLanguage);
 
 function selectPlayColor(event) { 
 	controls.setPlayColor(event.target.value); }
